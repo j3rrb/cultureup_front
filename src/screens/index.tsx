@@ -1,3 +1,4 @@
 import LoginScreen from "./login";
+import SignUpScreen from "./signup";
 
-export { LoginScreen };
+export { LoginScreen, SignUpScreen };

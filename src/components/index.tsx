@@ -1,4 +1,4 @@
-import TextField from "./textField";
+import { DefaultTextField, PasswordTextField } from "./textFields";
 import { ConfirmationButton } from "./buttons";
 
-export { TextField, ConfirmationButton };
+export { DefaultTextField, PasswordTextField, ConfirmationButton };

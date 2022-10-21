@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { TextField } from "../../components";
+import { DefaultTextField, PasswordTextField } from "../../components/textFields";
 import { ConfirmationButton } from "../../components/buttons";
 import { COLORS } from "../../constants";
 import loginStyles from "./styles";
@@ -14,7 +14,7 @@ const formInitialValues = {
 const LoginValidationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
   password: Yup.string()
-    .min(2, "Too Short!")
+    .min(6, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
 });
@@ -43,7 +43,7 @@ export default function LoginScreen() {
             <Text style={styles.title}>Entrar</Text>
           </View>
           <View style={styles.inputs}>
-            <TextField
+            <DefaultTextField
               autoCapitalize="none"
               error={errors.email && touched.email ? errors.email : undefined}
               value={values.email}
@@ -51,14 +51,13 @@ export default function LoginScreen() {
               onChangeText={handleChange("email")}
               onBlur={handleBlur("email")}
             />
-            <TextField
+            <PasswordTextField
               autoCapitalize="none"
               error={
                 errors.password && touched.password
                   ? errors.password
                   : undefined
               }
-              secureTextEntry
               placeholder="Senha"
               value={values.password}
               onChangeText={handleChange("password")}
@@ -67,7 +66,7 @@ export default function LoginScreen() {
           </View>
           <View style={styles.buttons}>
             <ConfirmationButton
-              disabled={!!Object.keys(errors).length || isSubmitting}
+              disabled={isSubmitting}
               onPress={(e) => {
                 handleSubmit();
               }}
