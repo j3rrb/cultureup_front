@@ -1,5 +1,5 @@
-import { SignUpScreen } from "./src/screens";
+import EmployeesList from "./src/screens/employeesList";
 
 export default function App() {
-  return <SignUpScreen/>;
+  return <EmployeesList />;
 }
