@@ -1,5 +1,5 @@
-import { QVTIndex } from "./src/screens";
+import { QRCode } from "./src/screens";
 
 export default function App() {
-  return <QVTIndex />;
+  return <QRCode />;
 }
