@@ -1,5 +1,5 @@
-import EmployeesList from "./src/screens/employeesList";
+import { QVTIndex } from "./src/screens";
 
 export default function App() {
-  return <EmployeesList />;
+  return <QVTIndex />;
 }
