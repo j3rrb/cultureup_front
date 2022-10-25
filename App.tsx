@@ -1,5 +1,5 @@
-import Rate from "./src/screens/rate";
+import { CreateCompany } from './src/screens';
 
 export default function App() {
-  return <Rate/>;
+  return <CreateCompany />;
 }
