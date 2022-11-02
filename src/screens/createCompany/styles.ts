@@ -5,14 +5,26 @@ import { width100 } from '../../utils/dimensions';
 export default function createCompanyStyles() {
   return StyleSheet.create({
     header: {
-      height: 150,
       display: 'flex',
       justifyContent: 'center',
+      alignItems: 'center',
+      height: 120,
+    },
+    headerButton: {
+      position: 'absolute',
+      left: 10,
+      padding: 10,
+    },
+    headerButtonText: {
+      fontSize: 18,
+    },
+    headerText: {
+      fontSize: 25,
+      fontWeight: 'bold',
     },
     headerTitle: {
-      textAlign: 'center',
       fontSize: 30,
-      fontWeight: 'bold',
+      fontWeight: '700',
     },
     formContainer: {
       width: width100 * 0.95,

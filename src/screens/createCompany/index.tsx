@@ -1,10 +1,14 @@
 import { Formik } from 'formik';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import * as Yup from 'yup';
 
 import { ConfirmationButton, DefaultTextField } from '../../components';
 import { COLORS } from '../../constants';
 import createCompanyStyles from './styles';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../..';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'CreateCompany'>;
 
 const formInitialState = {
   name: undefined,
@@ -20,12 +24,21 @@ const CreateCompanyValidationSchema = Yup.object().shape({
     .required('Required'),
 });
 
-export default function CreateCompany() {
+export default function CreateCompanyScreen({ navigation }: Props) {
   const styles = createCompanyStyles();
 
   return (
     <View>
       <View style={styles.header}>
+        {navigation.canGoBack() && (
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
+            }}
+            style={styles.headerButton}>
+            <Text style={styles.headerButtonText}>Voltar</Text>
+          </TouchableOpacity>
+        )}
         <Text style={styles.headerTitle}>Cadastre sua empresa</Text>
       </View>
       <Formik

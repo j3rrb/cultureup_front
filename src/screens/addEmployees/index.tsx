@@ -4,8 +4,12 @@ import { ChipButton, ConfirmationButton } from '../../components';
 import { SearchableField } from '../../components/textFields';
 import { COLORS } from '../../constants';
 import addEmployeesStyles from './styles';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../..';
 
-export default function AddEmployees() {
+type Props = NativeStackScreenProps<RootStackParamList, 'AddEmployees'>;
+
+export default function AddEmployeesScreen({ navigation }: Props) {
   const styles = addEmployeesStyles();
   const [selectedEmployees, setSelectedEmployees] = useState<number[]>([]);
 
@@ -22,9 +26,15 @@ export default function AddEmployees() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.headerButton}>
-          <Text style={styles.headerButtonText}>Voltar</Text>
-        </TouchableOpacity>
+        {navigation.canGoBack() && (
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
+            }}
+            style={styles.headerButton}>
+            <Text style={styles.headerButtonText}>Voltar</Text>
+          </TouchableOpacity>
+        )}
         <Text style={styles.headerText}>Adicionar colaboradores</Text>
       </View>
       <View style={styles.inputContainer}>

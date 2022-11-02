@@ -1,16 +1,20 @@
 import { Formik } from 'formik';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Yup from 'yup';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { ConfirmationButton, DefaultTextField } from '../../components';
 import { COLORS } from '../../constants';
 import forgotPasswordStyles from './styles';
+import { RootStackParamList } from '../../..';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
 });
 
-export default function ForgotPassword() {
+type Props = NativeStackScreenProps<RootStackParamList, 'ForgotPassword'>;
+
+export default function ForgotPasswordScreen({ navigation }: Props) {
   const styles = forgotPasswordStyles();
 
   return (
@@ -25,9 +29,15 @@ export default function ForgotPassword() {
       {({ values, errors, touched, handleSubmit, handleBlur, handleChange }) => (
         <View>
           <View style={styles.header}>
-            <TouchableOpacity style={styles.headerButton}>
-              <Text style={styles.headerButtonText}>Voltar</Text>
-            </TouchableOpacity>
+            {navigation.canGoBack() && (
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.goBack();
+                }}
+                style={styles.headerButton}>
+                <Text style={styles.headerButtonText}>Voltar</Text>
+              </TouchableOpacity>
+            )}
             <Text style={styles.headerText}>Recuperação de senha</Text>
           </View>
           <View style={styles.descriptionContainer}>

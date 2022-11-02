@@ -1,21 +1,21 @@
-import QRCode from './QRCode';
-import AddEmployees from './addEmployees';
-import CreateCompany from './createCompany';
-import EmployeesList from './employeesList';
-import ForgotPassword from './forgotPassword';
+import QRCodeScreen from './QRCode';
+import AddEmployeesScreen from './addEmployees';
+import CreateCompanyScreen from './createCompany';
+import EmployeesListScreen from './employeesList';
+import ForgotPasswordScreen from './forgotPassword';
 import LoginScreen from './login';
-import QVTIndex from './qvtIndex';
-import Rate from './rate';
+import QVTIndexScreen from './qvtIndex';
+import RateScreen from './rate';
 import SignUpScreen from './signup';
 
 export {
   LoginScreen,
   SignUpScreen,
-  EmployeesList,
-  QVTIndex,
-  QRCode,
-  Rate,
-  CreateCompany,
-  AddEmployees,
-  ForgotPassword,
+  EmployeesListScreen,
+  QVTIndexScreen,
+  QRCodeScreen,
+  RateScreen,
+  CreateCompanyScreen,
+  AddEmployeesScreen,
+  ForgotPasswordScreen,
 };

@@ -6,6 +6,10 @@ import { COLORS } from '../../constants';
 import { useState } from 'react';
 import { width100 } from '../../utils/dimensions';
 import * as Yup from 'yup';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../..';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Rate'>;
 
 const formInitialState = {
   message: '',
@@ -15,16 +19,22 @@ const RateValidationSchema = Yup.object().shape({
   message: Yup.string().required('Required'),
 });
 
-export default function Rate() {
+export default function RateScreen({ navigation }: Props) {
   const styles = rateStyles();
   const [messageType, setMessageType] = useState(true);
 
   return (
     <View>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.headerButton}>
-          <Text style={styles.headerButtonText}>Voltar</Text>
-        </TouchableOpacity>
+        {navigation.canGoBack() && (
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
+            }}
+            style={styles.headerButton}>
+            <Text style={styles.headerButtonText}>Voltar</Text>
+          </TouchableOpacity>
+        )}
         <Text style={styles.headerTitle}>Avaliar</Text>
       </View>
       <Formik

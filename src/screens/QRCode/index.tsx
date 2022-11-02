@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner';
 import BarcodeMask from 'react-native-barcode-mask';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../..';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'QRCode'>;
 
 const finderWidth: number = 280;
 const finderHeight: number = 230;
@@ -10,7 +14,7 @@ const height = Dimensions.get('window').height;
 const viewMinX = (width - finderWidth) / 2;
 const viewMinY = (height - finderHeight) / 2;
 
-export default function BarCodeScanScreen() {
+export default function BarCodeScanScreen({ navigation }: Props) {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [type, setType] = useState<any>(BarCodeScanner.Constants.Type.back);
   const [scanned, setScanned] = useState<boolean>(false);
