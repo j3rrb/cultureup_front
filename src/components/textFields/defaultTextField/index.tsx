@@ -9,13 +9,15 @@ type Props = {
   maskText?: string;
 };
 
+export type DefaultTextFieldProps = TextInputProps & Props;
+
 export default function DefaultTextField({
   error,
   maskText,
   mask,
   onChangeText,
   ...props
-}: TextInputProps & Props) {
+}: DefaultTextFieldProps) {
   const styles = textFieldStyles();
 
   return (

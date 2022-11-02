@@ -1,5 +1,5 @@
-import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
-import confimationButtonStyles from "./styles";
+import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import confimationButtonStyles from './styles';
 
 type Props = {
   text: string;
@@ -15,7 +15,7 @@ export default function ConfirmationButton({
   borderColor,
   ...props
 }: TouchableOpacityProps & Props) {
-  const styles = confimationButtonStyles({ color, width, borderColor });
+  const styles = confimationButtonStyles({ color, width, borderColor, disabled: props.disabled });
 
   return (
     <TouchableOpacity {...props} style={styles.button}>

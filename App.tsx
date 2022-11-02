@@ -1,5 +1,5 @@
-import { CreateCompany } from './src/screens';
+import { AddEmployees } from './src/screens';
 
 export default function App() {
-  return <CreateCompany />;
+  return <AddEmployees />;
 }

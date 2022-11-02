@@ -5,5 +5,15 @@ import QVTIndex from './qvtIndex';
 import QRCode from './QRCode';
 import Rate from './rate';
 import CreateCompany from './createCompany';
+import AddEmployees from './addEmployees';
 
-export { LoginScreen, SignUpScreen, EmployeesList, QVTIndex, QRCode, Rate, CreateCompany };
+export {
+  LoginScreen,
+  SignUpScreen,
+  EmployeesList,
+  QVTIndex,
+  QRCode,
+  Rate,
+  CreateCompany,
+  AddEmployees,
+};
