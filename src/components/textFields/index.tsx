@@ -1,4 +1,5 @@
-import PasswordTextField from "./passwordTextField";
-import DefaultTextField from "./defaultTextField";
+import PasswordTextField from './passwordTextField';
+import DefaultTextField from './defaultTextField';
+import SearchableField from './searchableField';
 
-export { DefaultTextField, PasswordTextField };
+export { DefaultTextField, PasswordTextField, SearchableField };
