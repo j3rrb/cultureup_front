@@ -17,7 +17,7 @@ export default function forgotPasswordStyles() {
     headerButton: {
       position: 'absolute',
       left: 10,
-      top: 30,
+      top: 65,
       padding: 10,
     },
     headerButtonText: {
