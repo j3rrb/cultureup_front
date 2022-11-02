@@ -1,11 +1,12 @@
-import LoginScreen from './login';
-import SignUpScreen from './signup';
-import EmployeesList from './employeesList';
-import QVTIndex from './qvtIndex';
 import QRCode from './QRCode';
-import Rate from './rate';
-import CreateCompany from './createCompany';
 import AddEmployees from './addEmployees';
+import CreateCompany from './createCompany';
+import EmployeesList from './employeesList';
+import ForgotPassword from './forgotPassword';
+import LoginScreen from './login';
+import QVTIndex from './qvtIndex';
+import Rate from './rate';
+import SignUpScreen from './signup';
 
 export {
   LoginScreen,
@@ -16,4 +17,5 @@ export {
   Rate,
   CreateCompany,
   AddEmployees,
+  ForgotPassword,
 };

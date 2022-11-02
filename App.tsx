@@ -1,5 +1,5 @@
-import { AddEmployees } from './src/screens';
+import { ForgotPassword } from './src/screens';
 
 export default function App() {
-  return <AddEmployees />;
+  return <ForgotPassword />;
 }
