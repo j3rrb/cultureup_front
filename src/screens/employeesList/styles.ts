@@ -1,24 +1,25 @@
-import { StyleSheet } from "react-native";
-import { width100 } from "../../utils/dimensions";
+import { StyleSheet } from 'react-native';
+
+import { width100 } from '../../utils/dimensions';
 
 export default function employeesListStyles() {
   return StyleSheet.create({
     itemsContainer: {
       width: width100 * 0.95,
-      alignSelf: "center",
+      alignSelf: 'center',
     },
     searchContainer: {
       width: width100 * 0.95,
-      alignSelf: "center",
+      alignSelf: 'center',
     },
     header: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       height: 120,
     },
     headerButton: {
-      position: "absolute",
+      position: 'absolute',
       left: 10,
       padding: 10,
     },
@@ -27,7 +28,7 @@ export default function employeesListStyles() {
     },
     headerText: {
       fontSize: 25,
-      fontWeight: "bold",
+      fontWeight: 'bold',
     },
   });
 }

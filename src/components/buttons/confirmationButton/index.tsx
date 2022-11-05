@@ -1,4 +1,5 @@
 import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+
 import confimationButtonStyles from './styles';
 
 type Props = {

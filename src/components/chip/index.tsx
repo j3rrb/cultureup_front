@@ -1,4 +1,5 @@
-import { Text, TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
+import { Text, TouchableOpacity, TouchableOpacityProps } from 'react-native';
+
 import chipStyles from './styles';
 
 type Props = {

@@ -15,7 +15,7 @@ export default function QVTListItem({ text, color, time }: Props) {
     <View style={styles.mainContainer}>
       <View style={styles.container}>
         <View style={styles.colorContainer}>
-          <View style={styles.color}></View>
+          <View style={styles.color} />
         </View>
         <Text style={styles.mainText}>{text}</Text>
       </View>

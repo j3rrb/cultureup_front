@@ -1,22 +1,14 @@
-import { useState } from "react";
-import {
-  Text,
-  TextInput,
-  TextInputProps,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { COLORS } from "../../../constants";
-import passwordTextFieldStyles from "./styles";
+import { useState } from 'react';
+import { Text, TextInput, TextInputProps, TouchableOpacity, View } from 'react-native';
+
+import { COLORS } from '../../../constants';
+import passwordTextFieldStyles from './styles';
 
 type Props = {
   error?: string;
 };
 
-export default function PasswordTextField({
-  error,
-  ...props
-}: TextInputProps & Props) {
+export default function PasswordTextField({ error, ...props }: TextInputProps & Props) {
   const styles = passwordTextFieldStyles();
   const [visible, setVisible] = useState(false);
 
@@ -37,9 +29,8 @@ export default function PasswordTextField({
           style={styles.iconButton}
           onPress={() => {
             handleChangeVisibility();
-          }}
-        >
-          <Text>{visible ? "Esconder" : "Mostrar"}</Text>
+          }}>
+          <Text>{visible ? 'Esconder' : 'Mostrar'}</Text>
         </TouchableOpacity>
       </View>
       <Text style={styles.errorText}>{error}</Text>
