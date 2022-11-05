@@ -1,9 +1,10 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+
+import { RootStackParamList } from '../../..';
 import { DefaultTextField } from '../../components';
 import { ListItem } from './components';
 import employeesListStyles from './styles';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../..';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'EmployeesList'>;
 

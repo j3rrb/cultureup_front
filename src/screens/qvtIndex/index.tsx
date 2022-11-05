@@ -1,10 +1,10 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import CircularProgress from 'react-native-circular-progress-indicator';
 
+import { RootStackParamList } from '../../..';
 import { QVTListItem } from './components';
 import qvtIndexStyles from './styles';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../..';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'QVTIndex'>;
 

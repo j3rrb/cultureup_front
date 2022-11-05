@@ -1,3 +1,6 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Formik } from 'formik';
+import { useState } from 'react';
 import {
   KeyboardAvoidingView,
   ScrollView,
@@ -7,15 +10,13 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { ConfirmationButton, DefaultTextField, PasswordTextField } from '../../components';
-import signUpStyles from './styles';
-import * as Yup from 'yup';
-import { Formik } from 'formik';
 import DropDownPicker from 'react-native-dropdown-picker';
-import { COLORS } from '../../constants';
-import { useState } from 'react';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import * as Yup from 'yup';
+
 import { RootStackParamList } from '../../..';
+import { ConfirmationButton, DefaultTextField, PasswordTextField } from '../../components';
+import { COLORS } from '../../constants';
+import signUpStyles from './styles';
 
 const formInitialValues = {
   fullName: undefined,

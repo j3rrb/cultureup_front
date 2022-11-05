@@ -1,8 +1,9 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner';
 import React, { useEffect, useState } from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { BarCodeScanner, BarCodeScannerResult } from 'expo-barcode-scanner';
 import BarcodeMask from 'react-native-barcode-mask';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+
 import { RootStackParamList } from '../../..';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'QRCode'>;

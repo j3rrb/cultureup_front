@@ -1,11 +1,12 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+
+import { RootStackParamList } from '../../..';
 import { ChipButton, ConfirmationButton } from '../../components';
 import { SearchableField } from '../../components/textFields';
 import { COLORS } from '../../constants';
 import addEmployeesStyles from './styles';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../..';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'AddEmployees'>;
 

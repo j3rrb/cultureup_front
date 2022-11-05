@@ -1,12 +1,12 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Formik } from 'formik';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Yup from 'yup';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
+import { RootStackParamList } from '../../..';
 import { ConfirmationButton, DefaultTextField } from '../../components';
 import { COLORS } from '../../constants';
 import forgotPasswordStyles from './styles';
-import { RootStackParamList } from '../../..';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),

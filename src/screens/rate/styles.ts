@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { width100 } from '../../utils/dimensions';
 
 export default function rateStyles() {

@@ -1,12 +1,13 @@
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Formik } from 'formik';
 import { Text, View } from 'react-native';
-import { DefaultTextField, PasswordTextField } from '../../components/textFields';
+import * as Yup from 'yup';
+
+import { RootStackParamList } from '../../..';
 import { ConfirmationButton } from '../../components/buttons';
+import { DefaultTextField, PasswordTextField } from '../../components/textFields';
 import { COLORS } from '../../constants';
 import loginStyles from './styles';
-import { Formik } from 'formik';
-import * as Yup from 'yup';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../..';
 
 const formInitialValues = {
   email: undefined,

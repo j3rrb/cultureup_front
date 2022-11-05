@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { COLORS } from '../../constants';
 import { height100, width100 } from '../../utils/dimensions';
 

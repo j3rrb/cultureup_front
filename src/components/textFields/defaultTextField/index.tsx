@@ -1,7 +1,8 @@
 import { Text, TextInput, TextInputProps, View } from 'react-native';
+import { MaskedTextInput } from 'react-native-mask-text';
+
 import { COLORS } from '../../../constants';
 import textFieldStyles from './styles';
-import { MaskedTextInput } from 'react-native-mask-text';
 
 type Props = {
   error?: string;

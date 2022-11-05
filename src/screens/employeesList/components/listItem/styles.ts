@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "../../../../constants";
+import { StyleSheet } from 'react-native';
+
+import { COLORS } from '../../../../constants';
 
 export default function listItemStyles() {
   return StyleSheet.create({
@@ -9,7 +10,7 @@ export default function listItemStyles() {
       borderBottomWidth: 1,
     },
     text: {
-      fontSize: 16
-    }
+      fontSize: 16,
+    },
   });
 }

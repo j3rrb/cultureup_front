@@ -1,3 +1,3 @@
-import ConfirmationButton from "./confirmationButton";
+import ConfirmationButton from './confirmationButton';
 
 export { ConfirmationButton };

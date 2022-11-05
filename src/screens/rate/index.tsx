@@ -1,13 +1,14 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import { DefaultTextField, ConfirmationButton } from '../../components';
-import rateStyles from './styles';
-import { Formik } from 'formik';
-import { COLORS } from '../../constants';
-import { useState } from 'react';
-import { width100 } from '../../utils/dimensions';
-import * as Yup from 'yup';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Formik } from 'formik';
+import { useState } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import * as Yup from 'yup';
+
 import { RootStackParamList } from '../../..';
+import { DefaultTextField, ConfirmationButton } from '../../components';
+import { COLORS } from '../../constants';
+import { width100 } from '../../utils/dimensions';
+import rateStyles from './styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Rate'>;
 
@@ -80,7 +81,11 @@ export default function RateScreen({ navigation }: Props) {
               />
             </View>
             <View>
-              <ConfirmationButton onPress={handleSubmit} color={COLORS.green} text="Enviar" />
+              <ConfirmationButton
+                onPress={() => handleSubmit()}
+                color={COLORS.green}
+                text="Enviar"
+              />
             </View>
           </View>
         )}
